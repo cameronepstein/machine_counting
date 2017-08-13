@@ -1,9 +1,9 @@
-var countToTen = () => {
-  console.log(findRandomNumber());
+var countToNumber = (maxNumber) => {
+  console.log(findRandomNumber(maxNumber));
 }
 
-findRandomNumber = () => {
-  return Math.floor(Math.random() * 10) + 1
+findRandomNumber = (number) => {
+  return Math.floor(Math.random() * number) + 1
 }
 
-countToTen();
+countToNumber(10);
