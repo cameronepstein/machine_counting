@@ -7,16 +7,13 @@ const errors = {
 // Attempt at replicating idea in my head of what a machine learning count algorithm might look like
 var countBetweenNumbers = (minNumber, maxNumber) => {
   let firstNumberChoice = findRandomNumber(maxNumber);
-  // If count reaches max number
   if (minNumber == maxNumber - 1 && firstNumberChoice === maxNumber) {
     console.log(firstNumberChoice);
     console.log(`counted to ${maxNumber}`);
-  // If count is correct
   } else if (firstNumberChoice - minNumber == 1) {
     console.log(firstNumberChoice);
     countBetweenNumbers(firstNumberChoice, maxNumber);
     return;
-    // If count is incorrect
   } else {
     console.log(firstNumberChoice);
     console.log(errors.countError);
